@@ -26,9 +26,7 @@
 
 - Git is a widely used version control software which we can access via the command line of our computers. First, lets install Git on our computers.
 
-  - [Install Git Mac](https://sourceforge.net/projects/git-osx-installer/)
-  - [Install Git Windows](https://git-for-windows.github.io/)
-  - [Install Git Linux](https://git-scm.com/download/linux)
+  - [Install Git](https://github.com/git-guides/install-git)
 
 - GitHub is a web-based Git repository hosting service. You can use it as a backup of your git repositories, or to collaborate as a team on a project. We will be using it to keep track of our in class, and homework files.
 
@@ -73,12 +71,12 @@
 
   Now clone your forked copy of the class repo to the directory we just created on our Desktop (You are welcome to do all of this to your Documents folder instead).
 
-  Go to the [Class Repository](https://github.com/Kadee80/WebDev_S18). Click on the **Clone or Download** button in the upper right. Copy the SSH link that appears.
+  Go to the [Class Repository](https://github.com/Kadee80/DynamicWeb23). Click on the **Clone or Download** button in the upper right. Copy the SSH link that appears.
 
   Back in Terminal/Command Line. Type
 
   ```
-  git clone https://github.com/Kadee80/WebDev_S18.git
+  git clone https://github.com/Kadee80/DynamicWeb23.git
   ```
 
   `git clone` is the git command, the `url` that follows is the link we copied so we could clone this repo.
@@ -161,6 +159,14 @@ git push
 ```
 
 Take a look at your online repo. It should match your local computers if you used ` git add` `git commit` and `git push` correctly.
+
+_Helpful Resources_
+
+- [Command Line Cheat Sheet Windows](http://simplyadvanced.net/blog/cheat-sheet-for-windows-command-prompt/)
+- [Terminal Cheat Sheet Mac](https://github.com/0nn0/terminal-mac-cheatsheet)
+- I will be teaching on a MAC, for the terminal/command line equivaltents see this [handy article](http://skimfeed.com/blog/windows-command-prompt-ls-equivalent-dir/).
+
+---
 
 _Helpful Resources_
 
