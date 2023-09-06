@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Forms and Inputs</title>
+</head>
+
+<body>
+    <!-- This is a form using basic input types -->
+    <a href="http://www.w3schools.com/html/html_forms.asp">You can learn more about forms from w3 schools here</a>
+    <p>The form <em>action</em> usually contains a file or link to process the for data.</p>
+    <form action="create-profile.js" name="user-create" target="_self" method="GET">
+        <fieldset>
+            <legend>Simple Text Input</legend>
+            <p>This is your most basic text input</p>
+            <label for="FirstName">First Name:</label>
+            <input type="text" name="FirstName">
+            <!-- We can limit the character length with an attribute -->
+            <label for="LastName">Last Name:</label>
+            <input type="text" name="LastName" placeholder="Last Name" maxlength="6">
+        </fieldset>
+        <fieldset>
+            <legend>Text Area Example</legend>
+            <label for="WhyClass">Why did you take this class?</label>
+            <br>
+            <textarea name="WhyClass" cols="50" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Check Boxes</legend>
+            <p>Check boxes allow the user to select more than one option/value at a time. Checkboxes will all have the same name but different values</p>
+            <label for="pet">What pets do you have?</label>
+            <input type="checkbox" name="pet" value="dog">DOG
+            <input type="checkbox" name="pet" value="cat">CAT
+            <input type="checkbox" name="pet" value="bird">BIRD
+            <input type="checkbox" name="pet" value="goat">GOAT
+        </fieldset>
+        <fieldset>
+            <legend>Radio Buttons</legend>
+            <p>Radio Buttons allow the user to select only one option/value at a time. Checkboxes will all have the same name but different values</p>
+            <label for="pet">Which ones your favorite?</label>
+            <input type="radio" name="pet-fav" value="dog">DOG
+            <input type="radio" name="pet-fav" value="cat">CAT
+            <input type="radio" name="pet-fav" value="bird">BIRD
+            <input type="radio" name="pet-fav" value="goat">GOAT
+        </fieldset>
+        <fieldset>
+            <legend>Select Option Dropdown</legend>
+            <label for="state">Pick a State</label>
+            <select name="state">
+                <option value="NY">New York</option>
+                <option value="NJ">New Jersey</option>
+                <option value="FL">Florida</option>
+            </select>
+        </fieldset>
+        <input type="button" value="Submit" name="submit-profile">
+        <br>
+        <p>We can disable a button with the disabled attribute</p>
+        <input type="button" value="SubmitD" name="submit-disabled" disabled>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!-- Layout 1, Pixels -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This is used to define the alphabet your css fonts will be using.
+    Failure to do this will result in whacky fonts having black boxed characters -->
+    <meta charset="UTF-8" />
+    <!-- Tells the content to take up the entire width of the viewport at a scale of 1
+    this is important for when we do media queries -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Content in title tags shows up in search engines and browser tabs -->
+    <title>Layout 1, Pixels Only</title>
+    <!-- Import stylesheet with a path relative to this files location -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout1.css" />
+  </head>
+
+  <body>
+    <!-- header, main, sidebar, and a footer using pixels and semantic html -->
+    <header>
+      A header element with a width if 100% because it displays block by
+      default.
+    </header>
+    <main class="clearfix">
+      <h1>Main content section - headings always display block by default.</h1>
+      <article>
+        <h2>article with 3 sections</h2>
+        <section>Section 1</section>
+        <section>Section 2</section>
+        <section>Section 3</section>
+      </article>
+      <aside>
+        <h2>Sidebar</h2>
+        <ul class="vertical-menu">
+          <li><a href="#">item 1</a></li>
+          <li><a href="#">item 2</a></li>
+          <li><a href="#">item 3</a></li>
+        </ul>
+      </aside>
+    </main>
+    <footer><h4>some footer text</h4></footer>
+  </body>
+</html>

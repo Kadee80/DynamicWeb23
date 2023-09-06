@@ -1,0 +1,55 @@
+/* Layout 1 Pixels only */
+
+/* css specificity
+tag=1
+class=10
+id=100
+
+li a = 2
+ul li.someclass = 12
+div#veryImportant = 101
+*/
+
+main {
+  width:960px;
+  /* first number is top/bottom second is left/right*/
+  margin: 0 auto;
+}
+
+article{
+  width: 580px;
+  float: left;
+  margin-right:20px;
+}
+
+aside {
+  width: 300px;
+  float:left;
+  min-height: 500px;
+}
+
+article, aside {
+  padding:20px;
+}
+
+ul.vertical-menu {
+  list-style-type: none;
+  padding:0;
+}
+
+.vertical-menu li{
+  text-align: center;
+  border-bottom: 2px solid blue;
+}
+
+li a {
+  font-size: 18px;
+  color:purple;
+  text-decoration:none;
+  padding:10px 20px;
+  display: block;
+}
+
+li a:hover{
+  background-color: rgba(0,100,255,0.7);
+}

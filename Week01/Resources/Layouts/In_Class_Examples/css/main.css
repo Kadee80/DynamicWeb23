@@ -1,0 +1,39 @@
+/* Reset/Global CSS declarations to get rid of browser defaults for some tags */
+
+/* get rid of whitespace around the entire page 
+caused by browser default margin */
+html, body {
+  margin: 0;
+}
+
+/* 
+border-box tells the browser to account for any border and padding 
+in the values you specify for an element's width and height. 
+If you set an element's width to 100 pixels, 
+that 100 pixels will include any border or padding you added, 
+and the content box will shrink to absorb that extra width. */
+* {
+  box-sizing:border-box;
+}
+
+/* when you float items inside a parent, you will need a clearfix
+on the container element to ensure that it wraps around all floated items */
+.clearfix::after {
+  display: block;
+  clear:both;
+  /* ensure cross browser compatability */
+  height:0;
+  font-size:0;
+  content: '';
+  /* super paranoid mode */
+  visibility: hidden;
+}
+
+div, header, section, article, aside, footer, main {
+  min-height:100px;
+  /* RGBA */
+  background-color: rgba(0,100,255,0.2);
+}
+
+
+

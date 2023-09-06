@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Box Model</title>
+  <!-- Internal Style Sheet -->
+  <style type="text/css">
+    /* Use the universal selector to remove all of the default margins and padding from every element on the page so we can write our own from scratch */
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 
+    TAG SELECTOR
+    Applying styles to the body tag will trickle down to all child elements on the page unless they are overwritten by a more specific tag.
+    */
+    body{
+      /* background-color: black; */
+      font-family:"Helvetica Neue", Arial, sans-serif;
+      color: #555555;
+      /* font-style: italic; */
+    }
+
+    /* First, lets use a tag selector to apply a background color to every div on our page so we can see how our layouts nests and develops */
+    div{
+      background-color: rgba(0,0,200,.2);
+    }
+
+    /* Fixed width grid, using pixels */
+    .container{
+      /* starter width in pixels */
+      /* Divs are elements that display block by default. They want to take up 100% of the available space and they dont want to share horizontal space with another element.
+
+      Block level elements can recieve a width and a height to override thier defaul size
+
+      */
+      width: 900px;
+      /* we can cetner block elements that have a defined width using margin auto for the left and right values. think of margin as personal space between elements */
+      margin: 0 auto;
+      /* margin-top: 100px; */
+      /* Adding padding will add to our original 900px width, and put space between our container edge and the edge of its child elements */
+      padding: 10px;
+    }
+
+    .thumbnail{
+      /* Give our thumbnails a fixed width of 300px  */
+      width: 300px;
+      height: 300px;
+      /* stack to the left as long as there is space using float */
+      /* Notice when we use float by itself, it collapses our container,
+      whenever we float elements we need to make sure we clear them as well
+       */
+      float: left;
+
+    }
+
+    /* clear fix 1: adding a clear class to an invisible element on the page */
+    .clear{
+      clear: both;
+    }
+
+    /* clear fix the right way, use pure css to solve the problem */
+    .clear-fix::after{
+      /* make sure we have some content to our invisible element in order for it to exisit */
+      content: ' ';
+      display: block;
+      clear: both;
+      /* ensure some older compatibility */
+      height: 0;
+      font-size: 0;
+      visibility:  hidden;    
+    }
+
+    /* Fluid layout styles using % */
+    .container-fluid{
+      width: 90%;
+      padding: 2%;
+      margin:  0 auto;
+    }
+
+    .thumbnail-fluid{
+      width: 20%;
+      height: 300px;
+      float: left;
+      margin: 1%;
+      /* Border: width | style | color; */
+      border: 10px dashed red;
+    }
+
+    .thumbnail-border{
+      width: 300px;
+      height: 300px;
+      float: left;
+      margin: 10px;
+      border-width: 5px;
+      /* 300px- 2*10px - 2*5px */
+      width: 270px;
+      padding: 10px;
+      /* 270 -2*10px */
+      width: 250px;
+      border-style: solid;
+      border-color: #0000FF;
+      
+
+    }
+
+    p{
+      text-align: justify;
+    }
+
+  </style>
+</head>
+<body>
+<div>owihegiehrgiejrhg;wiorhgiw;</div>
+<!-- margin -->
+<h2> Fixed Pixel Based Layout and class= clear </h2>
+<div class="container">
+  <!-- padding -->
+  <div class="thumbnail"></div>
+  <div class="thumbnail"></div>
+  <div class="thumbnail"></div>
+  <br class="clear">
+</div>
+<!-- Prefered way using clearfix in pure css -->
+<h2> Fixed Pixel Based Layout and clearfix</h2>
+<div class="container clear-fix">
+  <!-- padding -->
+  <div class="thumbnail"></div>
+  <div class="thumbnail"></div>
+  <div class="thumbnail"></div>
+</div>
+
+<h2> Fluid Percentage Based Layout Using Percentage</h2>
+
+<div class="container-fluid clear-fix">
+  <div class="thumbnail-fluid"></div>
+  <div class="thumbnail-fluid"></div>
+  <div class="thumbnail-fluid"></div>
+  <div class="thumbnail-fluid"></div>
+</div>
+
+<h2>Breaking our dimension with margins, padding, and border with pixels</h2>
+<div class="container clear-fix">
+  <div class="thumbnail-border">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec justo sed tortor mollis vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus lobortis efficitur tortor non consectetur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Nam eu posuere ipsum. Integer eu tempor neque. Integer sit amet ipsum turpis.</p>
+  </div>
+  <div class="thumbnail-border"></div>
+  <div class="thumbnail-border"></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
