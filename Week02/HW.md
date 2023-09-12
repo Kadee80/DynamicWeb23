@@ -1,4 +1,4 @@
-#HW Week 2: Due Week 3
+# HW Week 2: Due Week 3
 
 This weeks assignment is style your <RecipeCard /> and its child components. You may follow the figma design linked above or design a card of your choice and apply your own styles.
 
