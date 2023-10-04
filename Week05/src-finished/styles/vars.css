@@ -1,0 +1,17 @@
+:root {
+  /* colors */
+  --c-blue: #48B2FF;
+
+  /* font weights */
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-regular: 400;
+  --fw-light: 300;
+
+  /* font-families */
+  --ff-open-sans: 'Open Sans', sans-serif;
+  --ff-jua:  'Jua', sans-serif;
+
+  /* line-heights */
+
+}

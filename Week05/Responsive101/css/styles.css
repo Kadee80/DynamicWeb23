@@ -1,15 +1,136 @@
 /* Global Styles */
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: Helvetica,  Arial,  sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
 /* Desktop First Styling */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../img/grey_wash_wall.png');
+  padding: 0 2rem;
+  position: relative;
+}
+
+.brand {
+  margin: 0;
+  font-weight: 300;
+}
+
+header a {
+  color: #AAA;
+  text-decoration: none;
+}
+
+.mobile-menu { 
+  display: none;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.menu li {
+  min-width: 5rem;
+}
+
+.menu li a {
+  display: block;
+  padding: 1rem;
+}
+
+.menu li a:hover {
+  color: #EEE;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  flex: 0 0 23%;
+  margin: 2rem auto;
+}
+
 
 /* MEDIA QUERIES */
 
 /* tablet size */
 @media only screen and (min-width: 768px) and (max-width:1024px){
+  body {
+    background-color: green;
+  }
 
+  .thumb {
+    flex: 0 0 45%;
+    margin: 1rem auto;
+  }
 }
 
 /* Smaller than ipad classic in portrait so we will assume mobile  */
 @media only screen and (max-width:767px){
+  body {
+    background-color: blue;
+  }
 
+  header {
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    padding: 0;
+  }
+
+  .brand {
+    margin: 0.5rem;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    right: 1rem;
+    top:0.5rem;
+    display: block;
+    font-size: 2rem;
+    color:#AAA;
+  }
+
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu li {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .thumb {
+    flex: 1 1 100%;
+    margin: 1rem auto;
+  }
 }
