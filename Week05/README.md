@@ -17,10 +17,11 @@ Notes on CSS modules and Flow can be found in [Week03](https://github.com/Kadee8
 
 Together we will:
 
-- Create aand import stylesheet containing our CSS variables for reusuable fonts/colors/sizing etc.
+- Breifly discuss ternaries and conditional rendering inside our JSX.
+- Create and import stylesheet containing our CSS variables for reusuable fonts/colors/sizing etc.
 - Create a global stylesheet to handle resets and other project-wide styles.
 - Import and use our CSS vars inside our CSS Module stylesheet.
-- \*Take a moment for questions before switching gears
+- Take a moment for questions before switching gears.
 - Install Flow and type check our data.
 
 ## OPTIONAL: Responsive Layouts and Media Queries
