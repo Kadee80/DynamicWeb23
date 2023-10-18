@@ -151,11 +151,17 @@ When using input elements in React we must follow the following pattern:
 Why must we follow this pattern? What is it doing?
 
 1- A user types in our input
+
 2- The browser updates the text input (normal browser behavior)
+
 3- The browsers also triggers a `onChange` event (normal browser behavior)
+
 4- Now we must read the value from the input and update our state
+
 5- State updates via its setter function
+
 6- Since State is updated the component will re-render with the new value (updated term in state) so we can see the new term the user typed
+
 7- Now our input is bound to our piece of state using React’s state system! This is seems tedious but will allow greater functionality like validation and error handling in the future. Libraries like `Formik` do all of this behind the scenes for us.
 
 ```jsx
