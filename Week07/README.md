@@ -23,7 +23,7 @@ JSON Server
 We will be running 2 different commands in 2 different tab of terminal for the rest of this project. Remember the first tab is for the usual dev server. Let’s open up a second tab and make sure you cd into the current project directory.
 
 ```bash
-nom install json-server
+npm install json-server
 ```
 
 Create db.json file inside the root of your project (this is where the data will be stored).
@@ -69,7 +69,7 @@ Starting our server and testing out routes may surface some errors for some of y
 restart json server (command C to kill server at any time)
 
 update your scripts in package.json to:
-`"server": "json-server —port 3001 --watch db.json --host 1270.0.1",`
+`"server": "json-server —port 3001 --watch db.json --host 127.0.0.1",`
 
 2. If you get a TypeError [ERR_INVALID_ARG_TYPE]
 
