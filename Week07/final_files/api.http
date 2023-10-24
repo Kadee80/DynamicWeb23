@@ -1,0 +1,23 @@
+GET http://localhost:3001/todos HTTP/1.1
+Content-Type: application/json
+
+###
+# Create a new todo
+POST http://localhost:3001/todos HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Make the bed"
+}
+
+###
+PUT http://localhost:3001/todos/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Walk the dog"
+}
+
+###
+DELETE http://localhost:3001/todos/1 HTTP/1.1
+Content-Type: application/json
