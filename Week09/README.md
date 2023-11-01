@@ -77,7 +77,8 @@ Let’s now apply all of our conditional classes together!
 ### What about Icons in our buttons?
 
 React Icons gives us access to a ton of icon libraries such as font awesome or material design:
-react-icons.github.io/react-icons (documentation)
+
+`react-icons.github.io/react-icons` - copy and past into browser to view documentation
 
 The author of this library smashed them all together and made them all work the same in this library
 
