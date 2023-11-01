@@ -78,7 +78,7 @@ Let’s now apply all of our conditional classes together!
 
 React Icons gives us access to a ton of icon libraries such as font awesome or material design:
 
-[react icon library](react-icons.github.io/react-icons) 
+`react-icons.github.io/react-icons`
 
 The author of this library smashed them all together and made them all work the same in this library
 
