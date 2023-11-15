@@ -28,7 +28,7 @@ export default function Card({children, className}) {
 ```
 
 Counter Page:
-``jsx
+```jsx
 import {useState} from 'react'
 import Card from '../components/Card'
 import Button from '../components/Button'
