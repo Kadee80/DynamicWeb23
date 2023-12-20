@@ -366,27 +366,27 @@ function getIcons(label, sortBy, sortOrder) {
 
 Now they are working but we need a little bit of styling so that they line up with our header text!
 
-```jsx const updatedConfig = config.map((col) => {
-    if (!col.sortValue) {
-      return col
-    }
+```jsx
+const updatedConfig = config.map((col) => {
+  if (!col.sortValue) {
+    return col
+  }
 
-    return {
-      ...col,
-      header: () => (
-        <th
-          className="cursor-pointer hover:bg-gray-100"
-          onClick={() => handleClick(col.label)}
-        >
-          <div className="flex items-center">
-            {getIcons(col.label, sortBy, sortOrder)}
-            {col.label}
-          </div>
-        </th>
-      ),
-    }
-  })
-
+  return {
+    ...col,
+    header: () => (
+      <th
+        className="cursor-pointer hover:bg-gray-100"
+        onClick={() => handleClick(col.label)}
+      >
+        <div className="flex items-center">
+          {getIcons(col.label, sortBy, sortOrder)}
+          {col.label}
+        </div>
+      </th>
+    ),
+  }
+})
 ```
 
 You can add more styling if you wish, but this is a nice jump off point!
@@ -396,7 +396,28 @@ One last fixup. We probably want to reset the sort order when we switch columns 
 The logic: click on new column, immediately switch to `asc` order.
 
 ```jsx
+const handleClick = (label) => {
+  // LAST! when we have a new sortBy column
+  // switch to new sortBy and assume asc order
+  if (sortBy && label !== sortBy) {
+    setSortOrder('asc')
+    setSortBy(label)
+    // skip all other checks and return early
+    return
+  }
 
+  if (sortOrder === null) {
+    setSortOrder('asc')
+    setSortBy(label)
+  } else if (sortOrder === 'asc') {
+    setSortOrder('desc')
+    setSortBy(label)
+  } else if (sortOrder === 'desc') {
+    setSortOrder(null)
+    setSortBy(null)
+  }
+}
 ```
 
 Now we have a reusable Table and a SortableTable which implements Table under the hood!
+Final files will be uploaded and labeled finished. To use and review download, unzip and run `npm install` before `npm start`
